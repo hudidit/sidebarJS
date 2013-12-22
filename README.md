@@ -1,8 +1,11 @@
 sidebarJS
 -----------------
-Add sidebar navigation to your website easily.
+Add sidebar navigation to your website easily. Works great on mobile sites.
+
+**And you can customize the style with sass functions.**
 
 [View Demo](http://gallery.hudidit.com/huyueFramework/sidebarJS/)
+--------------
 
 How to use
 ---------------
@@ -27,6 +30,7 @@ How to use
 </body>
 </html>
 ```
+`<a href="#" class="sidebar-btn"></a>`can be put anywhere inside the `<body>`. It's centered vertically relative to its parent.
 Watch Out!
 ---------------
 - `<meta name="viewport" content="width=device-width">`is needed.
@@ -34,5 +38,6 @@ Watch Out!
 - `<nav class="sidebar-nav">...</nav>`is recommended to be written after other contents of the document, otherwise [FOUC](http://en.wikipedia.org/wiki/Flash_of_unstyled_content) might happen.
 - `<script>`must follows other code for sidebarJS.
 
-Under GPL License
+Under MIT License
 -----------------
+[MIT License](http://opensource.org/licenses/MIT)
