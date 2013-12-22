@@ -8,11 +8,9 @@ How to use
 ---------------
 ```html
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html>
 <head>
-	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<title></title>
     <link rel="stylesheet" href="./sidebar.css" />
 </head>
 <body>
@@ -22,8 +20,6 @@ How to use
     </header>
 	<nav class="sidebar-nav">
         <a href="...">Home</a>
-        <a href="...">Blog</a>
-        <a href="...">Portfolio</a>
         <a href="...">About</a>
         <a href="...">Contact</a>
     </nav>
