@@ -1,7 +1,14 @@
 /*
     sidebar.css
+    created by Yue Hu (http://hudidit.com).
+    Date: 2013-12-22
+    
+    user guide on github: https://github.com/hudidit/sidebarJS
+    
+    under MIT License.
 */
 /*
+    scss function guide
         meaning         e.g.
     $b: background;     #000;
     $c: color;          #fff;
@@ -11,6 +18,7 @@
     $s: smooth slide in;true/false
 */
 /*
+    scss function guide
         meaning     e.g.
     $w: width;      48px
     $h: height;     48px;
