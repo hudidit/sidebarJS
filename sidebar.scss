@@ -1,0 +1,121 @@
+/*
+    sidebar.css
+*/
+
+@mixin sidebar-trans( $t... ){
+    -webkit-transition: $t;
+    -moz-transition:    $t;
+    -ms-transition:     $t;
+    -o-transition:      $t;
+    transition:         $t;
+}
+@mixin sidebar-boxsizing{
+    box-sizing:     content-box;
+    -moz-box-sizing:content-box;
+}
+/*
+        meaning         e.g.
+    $b: background;     #000;
+    $c: color;          #fff;
+    $f: font;           (bold 20px verdana); Note: please don't do this: bold 20px/2 verdana; Because: sass would compile it to: bold 10px verdana;
+    $d: division line;  (1px solid #000);
+    $t: transition of nav items; (color .3s ease, background .3s ease) or (all .3s ease)
+    $s: smooth slide in;true/false
+*/
+@mixin sidebar( $b:#000, $c:#e9e9e9, $f:(20px helvetica,verdana) , $d: (1px solid #999), $t: ( all .3s ease), $s: true ){
+    
+    &.sidebar-ready{
+        @if ($s == true) {
+            @include    sidebar-trans( all .3s ease );
+        }
+    }
+    
+    background: $b;
+    color:      $c;
+    font:       $f;
+    
+    position:   fixed;
+    width:      100%;
+    height:     100%;
+    top:        0;
+    left:       100%;
+    line-height:2;
+    overflow:   auto;
+    z-index:    999999;
+    -webkit-transform: translateZ(0);
+    
+    &.sidebar-show{
+        @media all and ( min-width: 960px ){
+            left:   75%;
+        }
+        @media all and ( max-width: 959px ){
+            left:   20%;
+        }
+    }
+    
+    a{
+    
+        @include    sidebar-trans( $t );
+        @include    sidebar-boxsizing;
+        
+        color:          $c;
+        border-bottom:  $d;
+        padding-left:   1em;
+        display:        block;
+        text-decoration:none;
+        &:hover, &:active{
+            background: $c;
+            color:      $b;
+        }
+    }
+    .sidebar-btn-in-nav{
+        background:     $c;
+        color:          $b;
+    }
+    
+}
+
+/*
+        meaning     e.g.
+    $w: width;      48px
+    $h: height;     48px;
+    $b: background; (#f00) or (url(...))
+*/
+@mixin sidebar-btn( $w: 48px, $h: 48px,  $b:url(data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%000%00%00%000%08%06%00%00%00W%02%F9%87%00%00%00%06bKGD%00%FF%00%FF%00%FF%A0%BD%A7%93%00%00%00%84IDATh%81%ED%D61%0A%800%10D%D1Q%C8%D5%CD5%3CZ%AA%14%B9%846%0A%92%22%D1f%B3%86%FF%60%2A%9BY00%12%00%00%13%09%92%A2%A4%24%E9p%96tu%0B%AD%03%A2%83%A2%BDl%AD%03%B2%83%82%BD%E4g%E1%B5%3A%60i%5D%E7Q%7D%C0%3E%A2%C4G%7B%EB%E3%FD%88%8B%C6%FF%2Au%8A%5E%3Cb%00%18%8B-d%10%B6%90%2Bl%21%C3%B0%85%00%FC%00%5B%C8%20l%21W%D8B%86a%0B%01%00%E6s%02t9%E3%EE%BB%D7%F8%FE%00%00%00%00IEND%AEB%60%82) ){
+
+    
+    width:      $w;
+    height:     $h;
+    background:   $b;
+    margin-top: - $h / 2;
+    
+    position:   absolute;
+    display:    inline-block;
+    right:      0;
+    top:        50%;
+    background-repeat:  no-repeat;
+    background-size:    100% 100%;
+}
+
+.sidebar-nav{
+    @include sidebar;
+}
+.sidebar-btn{
+    @include sidebar-btn;
+}
+.sidebar-no-scroll{
+    overflow:   hidden;
+}
+.sidebar-layer{
+    position:   fixed;
+    z-index:    999; // sidebar's z-index is 999999
+    width:      100%;
+    height:     100%;
+    left:       0;
+    top:        0;
+    background: transparent;
+    display:    none;
+    &.sidebar-layer-show{
+        display:block;
+    }
+}
