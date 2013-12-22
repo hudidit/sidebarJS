@@ -1,5 +1,11 @@
 /*
     sidebar.js
+    created by Yue Hu (http://hudidit.com).
+    Date: 2013-12-22
+    
+    user guide on github: https://github.com/hudidit/sidebarJS
+    
+    under MIT License.
 */
 
 ;(function sidebar(){
