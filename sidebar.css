@@ -35,7 +35,7 @@
   left: 100%;
   line-height: 2;
   overflow: auto;
-  z-index: 999999;
+  z-index: 2147483647;
   -webkit-transform: translateZ(0); }
   .sidebar-nav.sidebar-ready {
     -webkit-transition: all 0.3s ease;
@@ -86,7 +86,7 @@
 
 .sidebar-layer {
   position: fixed;
-  z-index: 999;
+  z-index: 2147483646;
   width: 100%;
   height: 100%;
   left: 0;
