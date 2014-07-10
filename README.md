@@ -4,7 +4,7 @@ Add sidebar navigation to your website easily. Works great on mobile sites.
 
 **And you can customize the style with sass functions.**
 
-[View Demo](http://gallery.hudidit.com/huyueFramework/sidebarJS/)
+[View Demo](http://gallery.hudidit.com/old-projects/huyueFramework/sidebarJS/)
 --------------
 
 How to use
